@@ -15,6 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.myapplication.ui.theme.MyApplicationTheme
 import android.widget.TextView
 import android.widget.Button
+import android.widget.EditText
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,6 +38,10 @@ class MainActivity : ComponentActivity() {
             val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
         }
+        val myEditText: EditText = findViewById(R.id.myEditText)
+        val myEditText1: EditText = findViewById(R.id.myEditText1)
+
+        val enteredText: String = myEditText.text.toString()
     }
 }
 
